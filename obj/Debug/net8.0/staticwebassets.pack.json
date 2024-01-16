@@ -1,0 +1,749 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\Footer.css",
+      "PackagePath": "staticwebassets\\css\\Footer.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\Nav.css",
+      "PackagePath": "staticwebassets\\css\\Nav.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\Support.css",
+      "PackagePath": "staticwebassets\\css\\Support.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\app.css.map",
+      "PackagePath": "staticwebassets\\css\\app.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\custom.css",
+      "PackagePath": "staticwebassets\\css\\custom.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\search1.css",
+      "PackagePath": "staticwebassets\\css\\search1.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\slick-theme.css",
+      "PackagePath": "staticwebassets\\css\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\slick-theme.min.css",
+      "PackagePath": "staticwebassets\\css\\slick-theme.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\slick.min.css",
+      "PackagePath": "staticwebassets\\css\\slick.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\templatemo.css",
+      "PackagePath": "staticwebassets\\css\\templatemo.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\css\\templatemo.min.css",
+      "PackagePath": "staticwebassets\\css\\templatemo.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\fonts\\.gitkeep",
+      "PackagePath": "staticwebassets\\fonts\\.gitkeep"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\1. Harry-Potter.png",
+      "PackagePath": "staticwebassets\\img\\1. Harry-Potter.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\1fab3759d4c550c9_45974a31b0337152_6700315474670197154671.jpg",
+      "PackagePath": "staticwebassets\\img\\1fab3759d4c550c9_45974a31b0337152_6700315474670197154671.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\2- Anime.jpg",
+      "PackagePath": "staticwebassets\\img\\2- Anime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\2- conan.jpg",
+      "PackagePath": "staticwebassets\\img\\2- conan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\3. Book.jpg",
+      "PackagePath": "staticwebassets\\img\\3. Book.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\3. Fantasy.jpg",
+      "PackagePath": "staticwebassets\\img\\3. Fantasy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\41AdEcjdBNL._SY346_.jpg",
+      "PackagePath": "staticwebassets\\img\\41AdEcjdBNL._SY346_.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\51hH8wQN2kL._SX260_.jpg",
+      "PackagePath": "staticwebassets\\img\\51hH8wQN2kL._SX260_.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\Harry Potter and the Chamber of Secrets.jpg",
+      "PackagePath": "staticwebassets\\img\\Harry Potter and the Chamber of Secrets.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\Harry Potter and the Deathly Hallows.jpg",
+      "PackagePath": "staticwebassets\\img\\Harry Potter and the Deathly Hallows.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\Harry Potter and the Goblet of Fire.jpg",
+      "PackagePath": "staticwebassets\\img\\Harry Potter and the Goblet of Fire.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\Harry Potter and the Prisoner of Azkaban.jpg",
+      "PackagePath": "staticwebassets\\img\\Harry Potter and the Prisoner of Azkaban.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\about-hero.svg",
+      "PackagePath": "staticwebassets\\img\\about-hero.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\img\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\amazing-spider-man-vol-1.jpg",
+      "PackagePath": "staticwebassets\\img\\amazing-spider-man-vol-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\apple-icon.png",
+      "PackagePath": "staticwebassets\\img\\apple-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\avatars\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\avatars\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\avatars\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\avatars\\avatar-5.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\avatars\\avatar.jpg",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\bookstore.jpg",
+      "PackagePath": "staticwebassets\\img\\bookstore.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\cam.jpg",
+      "PackagePath": "staticwebassets\\img\\cam.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\conan100.jpg",
+      "PackagePath": "staticwebassets\\img\\conan100.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\conan100limit.jpg",
+      "PackagePath": "staticwebassets\\img\\conan100limit.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\fantastic-four-vol-2.jpg",
+      "PackagePath": "staticwebassets\\img\\fantastic-four-vol-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\harry.jpg",
+      "PackagePath": "staticwebassets\\img\\harry.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\icons\\Store.png",
+      "PackagePath": "staticwebassets\\img\\icons\\Store.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\icons\\icon-48x48.png",
+      "PackagePath": "staticwebassets\\img\\icons\\icon-48x48.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\mid.jpg",
+      "PackagePath": "staticwebassets\\img\\mid.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\newmoon.jpg",
+      "PackagePath": "staticwebassets\\img\\newmoon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\photos\\unsplash-1.jpg",
+      "PackagePath": "staticwebassets\\img\\photos\\unsplash-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\photos\\unsplash-2.jpg",
+      "PackagePath": "staticwebassets\\img\\photos\\unsplash-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\photos\\unsplash-3.jpg",
+      "PackagePath": "staticwebassets\\img\\photos\\unsplash-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\secrect.jpg",
+      "PackagePath": "staticwebassets\\img\\secrect.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\img\\zero.jpg",
+      "PackagePath": "staticwebassets\\img\\zero.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\js\\app.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\js\\app.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\js\\app.js.map",
+      "PackagePath": "staticwebassets\\js\\app.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\js\\custom.js",
+      "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\js\\jquery-1.11.0.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-1.11.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\js\\jquery-migrate-1.2.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-migrate-1.2.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\js\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\js\\templatemo.js",
+      "PackagePath": "staticwebassets\\js\\templatemo.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\js\\templatemo.min.js",
+      "PackagePath": "staticwebassets\\js\\templatemo.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\0d683e4cdcec8973d496b24169e87814.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0d683e4cdcec8973d496b24169e87814.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\2446a0920262557b1108c3cd999adb29.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2446a0920262557b1108c3cd999adb29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\41AdEcjdBNL._SY346_.jpg",
+      "PackagePath": "staticwebassets\\uploads\\41AdEcjdBNL._SY346_.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\453147e52a79ee27b768.jpg",
+      "PackagePath": "staticwebassets\\uploads\\453147e52a79ee27b768.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\49a315c74cf47fadf930e2c2e7b8d166.jpg",
+      "PackagePath": "staticwebassets\\uploads\\49a315c74cf47fadf930e2c2e7b8d166.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\51-rbiAIiRL._SX341_BO1,204,203,200_.jpg",
+      "PackagePath": "staticwebassets\\uploads\\51-rbiAIiRL._SX341_BO1,204,203,200_.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\51hH8wQN2kL._SX260_.jpg",
+      "PackagePath": "staticwebassets\\uploads\\51hH8wQN2kL._SX260_.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\67e679e61899cf6309fa640ead98ffc4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\67e679e61899cf6309fa640ead98ffc4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\751b324cac95683fbcafcf7859c6e928.jpg",
+      "PackagePath": "staticwebassets\\uploads\\751b324cac95683fbcafcf7859c6e928.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Attack On Titan Season 1 Part 1 Manga Box Set.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Attack On Titan Season 1 Part 1 Manga Box Set.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Attack On Titan Season 2 Manga Box Set.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Attack On Titan Season 2 Manga Box Set.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Attack on Titan Season 1 Part 2 Manga Box Set.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Attack on Titan Season 1 Part 2 Manga Box Set.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Attack on Titan Season 3 Part 1 Manga Box Set.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Attack on Titan Season 3 Part 1 Manga Box Set.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Continuing.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Continuing.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Demon Slayer (Kimetsu No Yaiba) Vol. 1, 1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Demon Slayer (Kimetsu No Yaiba) Vol. 1, 1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\ERS295XU4AA-vHb.jfif",
+      "PackagePath": "staticwebassets\\uploads\\ERS295XU4AA-vHb.jfif"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Gardens of the Moon.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Gardens of the Moon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Harry Potter and the Chamber of Secrets.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Harry Potter and the Chamber of Secrets.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Harry Potter and the Deathly Hallows.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Harry Potter and the Deathly Hallows.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Harry Potter and the Goblet of Fire.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Harry Potter and the Goblet of Fire.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\a7ea25a4dcaa52f4495caeeacca6bef4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a7ea25a4dcaa52f4495caeeacca6bef4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\a8f40d26dce3cc9dfa013c60b1bc758a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a8f40d26dce3cc9dfa013c60b1bc758a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\amazing-spider-man-vol-1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\amazing-spider-man-vol-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\b04f81219b3407bccd530168dd402576.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b04f81219b3407bccd530168dd402576.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\bb95b0f7f36410b20dac3d27fa1e1f91.jpg",
+      "PackagePath": "staticwebassets\\uploads\\bb95b0f7f36410b20dac3d27fa1e1f91.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\cam.jpg",
+      "PackagePath": "staticwebassets\\uploads\\cam.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\conan100.jpg",
+      "PackagePath": "staticwebassets\\uploads\\conan100.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\conan100limit.jpg",
+      "PackagePath": "staticwebassets\\uploads\\conan100limit.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\download.jpg",
+      "PackagePath": "staticwebassets\\uploads\\download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\fantastic-four-vol-2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\fantastic-four-vol-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\github.png",
+      "PackagePath": "staticwebassets\\uploads\\github.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\harry.jpg",
+      "PackagePath": "staticwebassets\\uploads\\harry.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\mid.jpg",
+      "PackagePath": "staticwebassets\\uploads\\mid.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\newmoon.jpg",
+      "PackagePath": "staticwebassets\\uploads\\newmoon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\p1.png",
+      "PackagePath": "staticwebassets\\uploads\\p1.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\png-clipart-gmail-gmail.png",
+      "PackagePath": "staticwebassets\\uploads\\png-clipart-gmail-gmail.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\preview.jpg",
+      "PackagePath": "staticwebassets\\uploads\\preview.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\preview1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\preview1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\secrect.jpg",
+      "PackagePath": "staticwebassets\\uploads\\secrect.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\shopping-cart.png",
+      "PackagePath": "staticwebassets\\uploads\\shopping-cart.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\zero.jpg",
+      "PackagePath": "staticwebassets\\uploads\\zero.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\slick.eot",
+      "PackagePath": "staticwebassets\\webfonts\\slick.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\slick.svg",
+      "PackagePath": "staticwebassets\\webfonts\\slick.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\slick.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\webfonts\\slick.woff",
+      "PackagePath": "staticwebassets\\webfonts\\slick.woff"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Final.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Final.props",
+      "PackagePath": "build\\Final.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Final.props",
+      "PackagePath": "buildMultiTargeting\\Final.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Final.props",
+      "PackagePath": "buildTransitive\\Final.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

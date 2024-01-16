@@ -1,0 +1,109 @@
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Final.Models;
+using Microsoft.AspNetCore.Authorization;
+using Final.Areas.Identity.Data;
+
+namespace Final.Controllers
+{
+    [Authorize(Roles = "Student")]
+    public class BookingController : Controller
+    {
+        private readonly LumosTutorIdentityDbContext _context;
+        private string Layout = "StudentLayout";
+
+        public BookingController(LumosTutorIdentityDbContext context)
+        {
+            _context = context;
+        }
+
+        // GET: Booking
+        public async Task<IActionResult> Index()
+        {
+            ViewBag.Layout = Layout;
+            // Assuming you have a Schedule model
+            var availableSchedules = await _context.Schedule
+                .Where(s => s.Bookings.Count < s.MaxCapacity && s.Date > DateTime.Now)
+                .ToListAsync();
+
+            return View(availableSchedules);
+        }
+
+        // GET: Booking/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            ViewBag.Layout = Layout;
+            if (id == null || _context.Schedule == null)
+            {
+                return NotFound();
+            }
+
+            var schedule = await _context.Schedule
+                .Include(s => s.Tutor)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (schedule == null)
+            {
+                return NotFound();
+            }
+
+            return View(schedule);
+        }
+
+        // POST: Booking/Book/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Book(int id)
+        {
+            ViewBag.Layout = Layout;
+            var schedule = await _context.Schedule
+                .Include(s => s.Tutor)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (schedule == null)
+            {
+                return NotFound();
+            }
+
+            // Assuming you have a Booking model
+            var booking = new Booking
+            {
+                StudentId = GetLoggedInStudentId(), // Implement logic to get the currently logged-in student's Id
+                ScheduleId = id,
+                BookingDate = DateTime.Now
+            };
+
+            _context.Add(booking);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: Booking/MyBookings
+        public async Task<IActionResult> MyBookings()
+        {
+            ViewBag.Layout = Layout;
+            var studentId = GetLoggedInStudentId(); // Implement logic to get the currently logged-in student's Id
+
+            var myBookings = await _context.Booking
+                .Include(b => b.Schedule)
+                .ThenInclude(s => s.Tutor)
+                .Where(b => b.StudentId == studentId)
+                .ToListAsync();
+
+            return View(myBookings);
+        }
+
+        private int GetLoggedInStudentId()
+        {
+            // Implement logic to get the currently logged-in student's Id
+            // This could involve querying the database or using information from the authentication system
+            // For simplicity, you might want to adapt this based on your authentication and authorization setup
+            // Replace this with your actual logic to obtain the StudentId.
+            return 1; // Placeholder value; replace with your implementation.
+        }
+    }
+}
