@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mdsUVCBpHr9kC+Asr5SV1BDHKSdpBji3dO5E7pnN7O0=",
+  "Hash": "eCzxIwWQ3kjnGDo/wWN5Fw8XODuQwAfWodEoCiQTokE=",
   "Source": "Final",
   "BasePath": "_content/Final",
   "Mode": "Default",
@@ -16,6 +16,44 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Asus\\Final\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Final.styles.css",
+      "SourceId": "Final",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Asus\\Final\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/Final",
+      "RelativePath": "Final.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Asus\\Final\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Final.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Final\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Final.bundle.scp.css",
+      "SourceId": "Final",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Asus\\Final\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/Final",
+      "RelativePath": "Final.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Asus\\Final\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Final.bundle.scp.css"
+    },
     {
       "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\css\\app.css",
       "SourceId": "Final",

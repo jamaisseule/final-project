@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-// using Final.Areas.Identity.Data;
+using Final.Areas.Identity.Data;
 
 namespace Final.Models;
 public class Booking

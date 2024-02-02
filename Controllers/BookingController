@@ -2,108 +2,141 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Final.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Final.Models; 
 using Final.Areas.Identity.Data;
+using Final.Utils;
 
 namespace Final.Controllers
 {
-    [Authorize(Roles = "Student")]
     public class BookingController : Controller
     {
+        private readonly UserManager<LumosTutorUser> _userManager;
         private readonly LumosTutorIdentityDbContext _context;
-        private string Layout = "StudentLayout";
+        private readonly IWebHostEnvironment hostEnvironment;
 
-        public BookingController(LumosTutorIdentityDbContext context)
+        public BookingController(LumosTutorIdentityDbContext context, UserManager<LumosTutorUser> userManager, IWebHostEnvironment environment)
         {
             _context = context;
+            _userManager = userManager;
+            hostEnvironment = environment;
         }
 
-        // GET: Booking
+        [Authorize(Roles = "Student")]
         public async Task<IActionResult> Index()
         {
-            ViewBag.Layout = Layout;
-            // Assuming you have a Schedule model
-            var availableSchedules = await _context.Schedule
-                .Where(s => s.Bookings.Count < s.MaxCapacity && s.Date > DateTime.Now)
+            var userID = _userManager.GetUserId(HttpContext.User);
+            LumosTutorUser user = _userManager.FindByIdAsync(userID).Result;
+            
+            ViewBag.Layout = "_MainLayout";  
+
+            var bookings = await _context.Booking
+                .Include(b => b.Tutor)
+                .Where(b => b.StudentId == user.Id)
                 .ToListAsync();
 
-            return View(availableSchedules);
+            return View(bookings);
         }
 
-        // GET: Booking/Details/5
-        public async Task<IActionResult> Details(int? id)
+        [Authorize(Roles = "Tutor")]
+        public async Task<IActionResult> TutorBookings()
         {
-            ViewBag.Layout = Layout;
-            if (id == null || _context.Schedule == null)
-            {
-                return NotFound();
-            }
+            var userID = _userManager.GetUserId(HttpContext.User);
+            LumosTutorUser user = _userManager.FindByIdAsync(userID).Result;
 
-            var schedule = await _context.Schedule
-                .Include(s => s.Tutor)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            ViewBag.Layout = "TutorLayout";  
 
-            if (schedule == null)
-            {
-                return NotFound();
-            }
+            var bookings = await _context.Booking
+                .Include(b => b.Student)
+                .Where(b => b.TutorId == user.Id)
+                .ToListAsync();
 
-            return View(schedule);
+            return View(bookings);
         }
 
-        // POST: Booking/Book/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Book(int id)
+        [Authorize(Roles = "Student")]
+        public IActionResult BookTutor(int tutorId, DateTime scheduleDate)
         {
-            ViewBag.Layout = Layout;
-            var schedule = await _context.Schedule
-                .Include(s => s.Tutor)
-                .FirstOrDefaultAsync(m => m.Id == id);
 
-            if (schedule == null)
-            {
-                return NotFound();
-            }
-
-            // Assuming you have a Booking model
+            var userID = _userManager.GetUserId(HttpContext.User);
             var booking = new Booking
             {
-                StudentId = GetLoggedInStudentId(), // Implement logic to get the currently logged-in student's Id
-                ScheduleId = id,
-                BookingDate = DateTime.Now
+                StudentId = userID,
+                TutorId = tutorId,
+                ScheduleDate = scheduleDate,
             };
 
-            _context.Add(booking);
-            await _context.SaveChangesAsync();
+            _context.Booking.Add(booking);
+            _context.SaveChanges();
 
-            return RedirectToAction(nameof(Index));
+            // Redirect to the bookings page
+            return RedirectToAction("Index");
         }
 
-        // GET: Booking/MyBookings
-        public async Task<IActionResult> MyBookings()
+        [Authorize(Roles = "Tutor")]
+        public async Task<IActionResult> ManageSchedules()
         {
-            ViewBag.Layout = Layout;
-            var studentId = GetLoggedInStudentId(); // Implement logic to get the currently logged-in student's Id
+            var userID = _userManager.GetUserId(HttpContext.User);
+            LumosTutorUser user = _userManager.FindByIdAsync(userID).Result;
+            ViewBag.Layout = "TutorLayout"; 
+            var schedules = await _context.Schedule
+            .Where(s => s.TutorId == user.Id)
+            .ToListAsync();
 
-            var myBookings = await _context.Booking
-                .Include(b => b.Schedule)
-                .ThenInclude(s => s.Tutor)
-                .Where(b => b.StudentId == studentId)
-                .ToListAsync();
-
-            return View(myBookings);
+            return View(schedules);
         }
 
-        private int GetLoggedInStudentId()
-        {
-            // Implement logic to get the currently logged-in student's Id
-            // This could involve querying the database or using information from the authentication system
-            // For simplicity, you might want to adapt this based on your authentication and authorization setup
-            // Replace this with your actual logic to obtain the StudentId.
-            return 1; // Placeholder value; replace with your implementation.
-        }
+    
+    
+
+[Authorize(Roles = "Tutor")]
+public async Task<IActionResult> TutorProfile()
+{
+    var userID = _userManager.GetUserId(HttpContext.User);
+    LumosTutorUser user = _userManager.FindByIdAsync(userID).Result;
+
+    ViewBag.Layout = "TutorLayout";  // Assuming a different layout for tutors
+
+    var tutor = await _context.Tutor
+        .Where(t => t.Id == user.Id)
+        .FirstOrDefaultAsync();
+
+    return View(tutor);
+}
+
+[Authorize(Roles = "Tutor")]
+public IActionResult EditTutorProfile()
+{
+    var userID = _userManager.GetUserId(HttpContext.User);
+    LumosTutorUser user = _userManager.FindByIdAsync(userID).Result;
+
+    ViewBag.Layout = "TutorLayout";  // Assuming a different layout for tutors
+
+    var tutor = _context.Tutor
+        .Where(t => t.Id == user.Id)
+        .FirstOrDefault();
+
+    return View(tutor);
+}
+
+[HttpPost]
+[ValidateAntiForgeryToken]
+[Authorize(Roles = "Tutor")]
+public async Task<IActionResult> EditTutorProfile(Tutor tutor)
+{
+    if (ModelState.IsValid)
+    {
+        _context.Tutor.Update(tutor);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("TutorProfile");
+    }
+
+    // If the model state is not valid, return to the edit view with validation errors
+    return View(tutor);
+}
+
     }
 }

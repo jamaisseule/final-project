@@ -1,0 +1,37 @@
+@* @model Final.Models.Schedule
+
+<title>Delete Schedule</title>
+<div class="row">
+    <div class="col-12 col-lg-10 col-xxl-12 d-flex">
+        <div class="card flex-fill">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Delete Schedule</h5>
+            </div>
+            <div class="row" style="margin-left:10px">
+                <div class="col-md-6">
+                    <dl>
+                         <dt class="col-sm-2">Id</dt>
+                         <dd class="col-sm-10">@Model.Id</dd>
+
+                         <dt class="col-sm-2">Day of Week</dt>
+                         <dd class="col-sm-10">@Model.DayOfWeek</dd>
+
+                         <dt class="col-sm-2">Start Time</dt>
+                         <dd class="col-sm-10">@Model.StartTime</dd>
+
+                         <dt class="col-sm-2">End Time</dt>
+                         <dd class="col-sm-10">@Model.EndTime</dd>
+
+                    </dl>
+                    <h4>Do you want to delete</h4>
+                    <form asp-action="Delete">
+                        <div class="form-group" style="margin-top:10px ;">
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+                            <a asp-action="Index" class="btn btn-primary">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@

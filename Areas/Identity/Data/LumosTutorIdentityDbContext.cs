@@ -24,9 +24,7 @@ public class LumosTutorIdentityDbContext : IdentityDbContext<LumosTutorUser>
     public DbSet<Final.Models.Language> Language { get; set; } = default!;
 
     public DbSet<Final.Models.Tutor>? Tutor { get; set; }
-
     // public DbSet<Final.Models.Schedule>? Schedule { get; set; }
-
 
     public DbSet<Final.Models.Booking>? Booking { get; set; }
 
