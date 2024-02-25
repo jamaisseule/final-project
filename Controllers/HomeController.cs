@@ -15,16 +15,24 @@ namespace Final.Controllers{
 
 public class HomeController : Controller
 {
-        private readonly ILogger<HomeController> _logger;
-        private readonly LumosTutorIdentityDbContext _context;
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+    private readonly ILogger<HomeController> _logger;
+    private readonly LumosTutorIdentityDbContext _context;
+
+    public HomeController(ILogger<HomeController> logger, LumosTutorIdentityDbContext context)
+    {
+        _logger = logger;
+        _context = context;
+    }
+
 
         public async Task<IActionResult> Index()
         {
+            // Example: Retrieve data from the database
+            // var data = await _context.Tutor.ToListAsync();
+
+            // return View(data);
             return View();
+        
         }
 
     public IActionResult Privacy()

@@ -453,3 +453,4 @@ C:\Users\Asus\Final\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cry
 C:\Users\Asus\Final\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Asus\Final\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Asus\Final\obj\Debug\net8.0\scopedcss\projectbundle\Final.bundle.scp.css
+C:\Users\Asus\Final\bin\Debug\net8.0\Newtonsoft.Json.dll
