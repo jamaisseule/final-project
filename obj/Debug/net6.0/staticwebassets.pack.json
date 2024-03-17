@@ -493,6 +493,10 @@
       "PackagePath": "staticwebassets\\fonts\\linearicons-v1.0.0\\icon-font.min.css"
     },
     {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\images\\HP3.jpg",
+      "PackagePath": "staticwebassets\\images\\HP3.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Final\\wwwroot\\images\\banner.png",
       "PackagePath": "staticwebassets\\images\\banner.png"
     },
@@ -955,6 +959,10 @@
     {
       "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\8504e7fa239d1ce9aca16afb31c2a758.png",
       "PackagePath": "staticwebassets\\uploads\\8504e7fa239d1ce9aca16afb31c2a758.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\HP3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\HP3.jpg"
     },
     {
       "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\LoginUser.png",

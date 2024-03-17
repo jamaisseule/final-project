@@ -68,7 +68,7 @@ namespace LUMOSBook.Controllers
         public IActionResult Create()
         {
             ViewData["AuthorID"] = new SelectList(_context.Author, "Id", "Name");
-            ViewData["CategoryID"] = new SelectList(_context.Category.Where(m => m.Status == "Approve"), "Id", "Name");
+            ViewData["CategoryID"] = new SelectList(_context.Category, "Id", "Name");
             ViewData["PublisherID"] = new SelectList(_context.Publisher, "Id", "Name");
             return View();
         }
@@ -98,7 +98,7 @@ namespace LUMOSBook.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AuthorID"] = new SelectList(_context.Author, "Id", "Name", book.AuthorID);
-            ViewData["CategoryID"] = new SelectList(_context.Category.Where(m => m.Status == "Approve"), "Id", "Name", book.CategoryID);
+            ViewData["CategoryID"] = new SelectList(_context.Category,"Id", "Name", book.CategoryID);
             ViewData["PublisherID"] = new SelectList(_context.Publisher, "Id", "Name", book.PublisherID);
             return View(book);
         }
@@ -117,7 +117,7 @@ namespace LUMOSBook.Controllers
                 return NotFound();
             }
             ViewData["AuthorID"] = new SelectList(_context.Author, "Id", "Name", book.AuthorID);
-            ViewData["CategoryID"] = new SelectList(_context.Category.Where(m => m.Status == "Approve"), "Id", "Name", book.CategoryID);
+            ViewData["CategoryID"] = new SelectList(_context.Category, "Id", "Name", book.CategoryID);
             ViewData["PublisherID"] = new SelectList(_context.Publisher, "Id", "Name", book.PublisherID);
             return View(book);
         }
@@ -163,7 +163,7 @@ namespace LUMOSBook.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AuthorID"] = new SelectList(_context.Author, "Id", "Name", book.AuthorID);
-            ViewData["CategoryID"] = new SelectList(_context.Category.Where(m => m.Status == "Approve"), "Id", "Name", book.CategoryID);
+            ViewData["CategoryID"] = new SelectList(_context.Category, "Id", "Name", book.CategoryID);
             ViewData["PublisherID"] = new SelectList(_context.Publisher, "Id", "Name", book.PublisherID);
             return View(book);
         }

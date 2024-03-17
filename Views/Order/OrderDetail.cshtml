@@ -1,4 +1,4 @@
-@* @model IEnumerable<LUMOSBook.Models.OrderItem>
+@model IEnumerable<LUMOSBook.Models.OrderItem>
 
 @{
     ViewData["Title"] = "Index";
@@ -15,8 +15,7 @@
 
             <li class="active"><a href="/Order/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Order</a></li>
 
-            <li class=""><a href="/Categories/RequestCategory"><em class="fa fa-dashboard">&nbsp;</em>Request
-                    Category</a>
+            <li class=""><a href="/Categories/Index"><em class="fa fa-dashboard">&nbsp;</em>Manage Category</a>
             </li>
             <br><br><br><br><br><br><br><br>
 
@@ -91,4 +90,4 @@
         </tbody>
         <a asp-action="Index"type="button" class="btn btn-warning" >Back to List</a>
     </table>
-</div> *@
+</div>

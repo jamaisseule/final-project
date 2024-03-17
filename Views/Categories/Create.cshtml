@@ -15,7 +15,7 @@
 
             <li class=""><a href="/Order/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Order</a></li>
 
-            <li class="active"><a href="/Categories/RequestCategory"><em class="fa fa-dashboard">&nbsp;</em>Request Category</a></li>
+            <li class="active"><a href="/Categories/Index"><em class="fa fa-dashboard">&nbsp;</em>Manage Category</a></li>
             <br><br><br><br><br><br><br><br>
 
             <li class="nav-item">
@@ -40,10 +40,10 @@
                     <input asp-for="Name" class="form-control" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
-                <div class="form-group" hidden>
-                    <label asp-for="Status" class="control-label"></label>
-                    <input type= "hidden" asp-for="Status" class="form-control" value ="Waiting" />
-                    <span asp-validation-for="Status" class="text-danger"></span>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <a asp-action="RequestCategory"type="button" class="btn btn-warning" >Back to List</a> |                    

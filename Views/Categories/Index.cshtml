@@ -2,20 +2,22 @@
 
 @{
     ViewData["Title"] = "Index Category";
-    Layout = "_AdminLayout";
+    Layout = "_StoreOwnerLayout";
 }
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
         <ul class="nav menu">
-            <li class=""><a href="/UserRoles/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage User</a></li>
+             <li class=""><a href="/Books/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Book</a></li>
 
-            <li class=""><a href="/RoleManager/Index"><em class="fa fa-dashboard">&nbsp;</em> Add Role</a></li>
+            <li class=""><a href="/Authors/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Author</a></li>
 
-            <li class="active"><a href="/Categories/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Category</a></li> 
+            <li class=""><a href="/Publishers/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Publishsher</a></li>
 
-            <li class=""><a href="/Admin/ReportDemo"><em class="fa fa-dashboard">&nbsp;</em> Report</a></li>
+            <li class=""><a href="/Order/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Order</a></li>
+
+            <li class="active"><a href="/Categories/Index"><em class="fa fa-dashboard">&nbsp;</em>Manage Category</a>
+            </li>
             <br><br><br><br><br><br><br><br>
-
             <li class="nav-item">
                 <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
                     asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
@@ -28,6 +30,9 @@
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <h2>Category Information</h2>
     <hr />
+     <p>
+        <a asp-action="Create" class="btn btn-primary">Create New</a>
+    </p>
     <table class="table">
         <thead>
             <tr>
@@ -35,10 +40,10 @@
                     @Html.DisplayNameFor(model => model.Name)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Status)
+                    @Html.DisplayNameFor(model => model.Description)
                 </th>
                 <th>
-                    Confirm
+                    &ensp;Edit &ensp;&ensp; Details &ensp;  Delete
                 </th>
             </tr>
         </thead>
@@ -50,7 +55,12 @@
                         @Html.DisplayFor(modelItem => item.Name)
                     </td>
                     <td>
-                        <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id"><span class="material-symbols-outlined">edit_note</span></a>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id"><button type="button" class="btn btn-success"><span class="material-symbols-outlined" > edit</span></button></a> |
+                        <a asp-action="Details" asp-route-id="@item.Id"><button type="button" class="btn btn-info"><span class="material-symbols-outlined">visibility</span></button></a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id"><button type="button" class="btn btn-danger"><span class="material-symbols-outlined">delete</span></button></a>
                     </td>
                 </tr>
             }

@@ -1,14 +1,21 @@
 @model LUMOSBook.Models.Category
 
 @{
-    ViewData["Title"] = "Delete Category";
-    Layout = "_AdminLayout";
+     ViewData["Title"] = "Index Category";
+    Layout = "_StoreOwnerLayout";
 }
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
         <ul class="nav menu">
-            <li class=""><a href="/Users/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage User</a></li>
-            <li class="active"><a href="/Categories/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Category</a>
+             <li class=""><a href="/Books/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Book</a></li>
+
+            <li class=""><a href="/Authors/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Author</a></li>
+
+            <li class=""><a href="/Publishers/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Publishsher</a></li>
+
+            <li class=""><a href="/Order/Index"><em class="fa fa-dashboard">&nbsp;</em> Manage Order</a></li>
+
+            <li class="active"><a href="/Categories/Index"><em class="fa fa-dashboard">&nbsp;</em>Manage Category</a>
             </li>
             <br><br><br><br><br><br><br><br>
 
@@ -31,16 +38,16 @@
                 @Html.DisplayFor(model => model.Name)
             </dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Status)
+                @Html.DisplayNameFor(model => model.Description)
             </dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Status)
+                @Html.DisplayFor(model => model.Description)
             </dd>
         </dl>
 
         <form asp-action="Delete">
             <input type="hidden" asp-for="Id" />
-            <a asp-action="Index"type="button" class="btn btn-warning" >Back to List</a> |
+            <a asp-action="Index"type="button" class="btn btn-warning" >Back to List</a> |  
             <input type="submit" value="Delete" class="btn btn-danger" />
 
         </form>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rpKSeuOArvINQEfLd8oW7DoafLM4XL20HQ2g9vbhviY=",
+  "Hash": "vmVkW+/haJ/gTReAwDRpPeUipIWmXkXGYPYRAlB0t94=",
   "Source": "LUMOSBook",
   "BasePath": "_content/LUMOSBook",
   "Mode": "Default",
@@ -3684,6 +3684,25 @@
       "OriginalItemSpec": "wwwroot\\images\\book8.jpg"
     },
     {
+      "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\images\\HP3.jpg",
+      "SourceId": "LUMOSBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Final\\wwwroot\\",
+      "BasePath": "_content/LUMOSBook",
+      "RelativePath": "images/HP3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\HP3.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\images\\icons\\favicon1.png",
       "SourceId": "LUMOSBook",
       "SourceType": "Discovered",
@@ -5962,6 +5981,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\gallery-08.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\HP3.jpg",
+      "SourceId": "LUMOSBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Final\\wwwroot\\",
+      "BasePath": "_content/LUMOSBook",
+      "RelativePath": "uploads/HP3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\HP3.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\item-cart-02.jpg",
