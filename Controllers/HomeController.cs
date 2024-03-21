@@ -173,7 +173,7 @@ public class HomeController : Controller
         myOrder.Address = address;
         myOrder.UserID = cusid;
         myOrder.Phone = phone;
-        myOrder.State = "Delivering";
+        myOrder.State = "In Process";
         _context.Order.Add(myOrder);
         _context.SaveChanges();//this generates the Id for Order
 
