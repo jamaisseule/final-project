@@ -1,4 +1,23 @@
-<script language='javascript' type='text/javascript'>
+@* <script language='javascript' type='text/javascript'>
 alert('Your cart is empty! Please add something into the cart!');
 window.location.href='/';
-</script>
+</script> *@
+
+@{
+    ViewData["Title"] = "EmptyCart";
+}
+<br><br><br><br>
+<section class="bg-light p-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="empty-cart-wrapper bg-white p-4 rounded shadow">
+                    
+                    <h1 class="text-center mb-4">Your Cart is Empty</h1>
+                    <p class="text-center mb-4">Please add something to your cart.</p>
+                    <a class="btn btn-primary btn-block" href="/">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
