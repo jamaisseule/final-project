@@ -119,6 +119,39 @@
                                                     <label class="form-label" for="phone"><strong>Phone</strong></label>
                                                     <input type="text" name="phone" class="form-control form-control-lg" value="@user.PhoneNumber"/>
                                                 </div>
+
+                                            <div class="form-check mb-4">
+    <input class="form-check-input" type="radio" name="paymentMethod" id="cashOnDelivery" value="CashOnDelivery" checked>
+    <label class="form-check-label" for="cashOnDelivery">
+        Cash on Delivery
+    </label>
+</div>
+<div class="form-check mb-4">
+    <input class="form-check-input" type="radio" name="paymentMethod" id="payByCard" value="PayByCard">
+    <label class="form-check-label" for="payByCard">
+        Credit Card
+    </label>
+</div>
+
+<!-- Credit card information fields -->
+<div id="creditCardFields" style="display: none;">
+    <div class="form-outline mb-4">
+        <label class="form-label" for="cardNumber"><strong>Card Number</strong></label>
+        <input type="text" name="cardNumber" class="form-control form-control-lg" />
+    </div>
+    <div class="form-outline mb-4">
+        <label class="form-label" for="expirationDate"><strong>Expiration Date</strong></label>
+        <input type="text" name="expirationDate" class="form-control form-control-lg" />
+    </div>
+    <div class="form-outline mb-4">
+        <label class="form-label" for="cvv"><strong>CVV</strong></label>
+        <input type="text" name="cvv" class="form-control form-control-lg" />
+    </div>
+    <div class="form-outline mb-4">
+        <label class="form-label" for="cardholderName"><strong>Cardholder Name</strong></label>
+        <input type="text" name="cardholderName" class="form-control form-control-lg" />
+    </div>
+</div>                  
                                                 <div class="row">
                                                     <input type="hidden" name="total" value="@total" />
                                                     <input
@@ -143,3 +176,30 @@
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var payByCardRadio = document.getElementById('payByCard');
+        var cashOnDeliveryRadio = document.getElementById('cashOnDelivery');
+        var creditCardFields = document.getElementById('creditCardFields');
+
+        // Initial check
+        toggleCreditCardFields(payByCardRadio.checked);
+
+        payByCardRadio.addEventListener('change', function() {
+            toggleCreditCardFields(this.checked);
+        });
+
+        cashOnDeliveryRadio.addEventListener('change', function() {
+            toggleCreditCardFields(!this.checked);
+        });
+
+        function toggleCreditCardFields(isVisible) {
+            if (isVisible) {
+                creditCardFields.style.display = 'block';
+            } else {
+                creditCardFields.style.display = 'none';
+            }
+        }
+    });
+</script>
