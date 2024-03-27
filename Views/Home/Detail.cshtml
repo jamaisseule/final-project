@@ -52,7 +52,6 @@
                             <input class="form-control" type="number" name="quantity" min="1" value="1">
                         </div>
                     </div>
-
                     <div class="text-center">
                         <button type="submit" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">Add to Cart</button>
                     </div>
@@ -67,6 +66,8 @@
         </div>
     </div>
 </section>
+<hr>
+
 
 <script>
     // Show notification when added to cart
@@ -74,9 +75,9 @@
         var form = document.querySelector('form[action="AddBook"]');
         form.addEventListener('submit', function(event) {
             event.preventDefault();
-            document.getElementById('notification').style.display = 'block';
+            document.getElementById('cartNotification').style.display = 'block';
             setTimeout(function() {
-                document.getElementById('notification').style.display = 'none';
+                document.getElementById('cartNotification').style.display = 'none';
             }, 3000); // Hide notification after 3 seconds
         });
     });

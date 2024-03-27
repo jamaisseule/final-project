@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vmVkW+/haJ/gTReAwDRpPeUipIWmXkXGYPYRAlB0t94=",
+  "Hash": "SFZ3yjd8vjeE4esckldCt+bV4Si3lLO78VtyNymGVFU=",
   "Source": "LUMOSBook",
   "BasePath": "_content/LUMOSBook",
   "Mode": "Default",
@@ -3513,12 +3513,12 @@
       "OriginalItemSpec": "wwwroot\\fonts\\Poppins\\Poppins-ThinItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\images\\banner.png",
+      "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\images\\about.png",
       "SourceId": "LUMOSBook",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Asus\\Final\\wwwroot\\",
       "BasePath": "_content/LUMOSBook",
-      "RelativePath": "images/banner.png",
+      "RelativePath": "images/about.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3529,7 +3529,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\banner.png"
+      "OriginalItemSpec": "wwwroot\\images\\about.png"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\images\\banner1.png",
+      "SourceId": "LUMOSBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Final\\wwwroot\\",
+      "BasePath": "_content/LUMOSBook",
+      "RelativePath": "images/banner1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\banner1.png"
     },
     {
       "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\images\\book1.jpg",
@@ -3682,6 +3701,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\book8.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\images\\Howls.jpg",
+      "SourceId": "LUMOSBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Final\\wwwroot\\",
+      "BasePath": "_content/LUMOSBook",
+      "RelativePath": "images/Howls.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Howls.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\images\\HP3.jpg",
@@ -5981,6 +6019,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\gallery-08.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Howls.jpg",
+      "SourceId": "LUMOSBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Final\\wwwroot\\",
+      "BasePath": "_content/LUMOSBook",
+      "RelativePath": "uploads/Howls.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Howls.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\HP3.jpg",

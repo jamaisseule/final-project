@@ -497,8 +497,16 @@
       "PackagePath": "staticwebassets\\images\\HP3.jpg"
     },
     {
-      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\images\\banner.png",
-      "PackagePath": "staticwebassets\\images\\banner.png"
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\images\\Howls.jpg",
+      "PackagePath": "staticwebassets\\images\\Howls.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\images\\about.png",
+      "PackagePath": "staticwebassets\\images\\about.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\images\\banner1.png",
+      "PackagePath": "staticwebassets\\images\\banner1.png"
     },
     {
       "Id": "C:\\Users\\Asus\\Final\\wwwroot\\images\\book1.jpg",
@@ -963,6 +971,10 @@
     {
       "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\HP3.jpg",
       "PackagePath": "staticwebassets\\uploads\\HP3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\Howls.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Howls.jpg"
     },
     {
       "Id": "C:\\Users\\Asus\\Final\\wwwroot\\uploads\\LoginUser.png",
