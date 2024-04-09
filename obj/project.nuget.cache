@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "y8uwyx8HtO8PK0NX8v/dSmeaj0YVTakjmsFXirktV9cqAH+mjh9bbdMeqPxj5ma2BpPQ5muOKvElKgj+9l4d6A==",
+  "dgSpecHash": "Bw5osv8FHLPG2ROqvcfTDFlu0Q47XJUdzrqN/q63xSD3oU/Exvg6YjQCG9D2E2iXAn9WDT1cFyZNLpYAmSMOVQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\Final\\LUMOSBook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\epplus.core\\1.5.4\\epplus.core.1.5.4.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\log4net\\2.0.17\\log4net.2.0.17.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
@@ -206,10 +207,10 @@
     "C:\\Users\\Asus\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.26\\microsoft.netcore.app.host.win-x64.6.0.26.nupkg.sha512"
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512"
   ],
   "logs": []
 }

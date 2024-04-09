@@ -286,6 +286,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPcmRlckRldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Asus/Final/Views/Home/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Final/Views/Home/PaymentFail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXltZW50RmFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Asus/Final/Views/Home/PlaceOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQbGFjZU9yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -300,6 +308,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Asus/Final/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Final/Views/Home/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Asus/Final/Views/Home/VnPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWblBheW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Asus/Final/Views/Order/Create.cshtml]

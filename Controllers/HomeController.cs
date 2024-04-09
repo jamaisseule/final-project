@@ -17,6 +17,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using LUMOSBook.Service;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.DateTime;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.RefAndLookup;
+using OfficeOpenXml.Style;
+using System.Net;
 
 namespace LUMOSBook.Controllers;
 
@@ -24,11 +29,13 @@ public class HomeController : Controller
 {
     private readonly LUMOSBookIdentityDbContext _context;
     private readonly UserManager<BookUser> _userManager;
+    private readonly IVnPayService _vnPayservice;
 
-    public HomeController(LUMOSBookIdentityDbContext context, UserManager<BookUser> userManager)
+    public HomeController(LUMOSBookIdentityDbContext context, UserManager<BookUser> userManager, IVnPayService vnPayService)
     {
         _context = context;
         _userManager = userManager;
+        _vnPayservice = vnPayService;
     }
 
     // public HomeController(ILogger<HomeController> logger)
@@ -47,7 +54,7 @@ public class HomeController : Controller
         var lUMOSBookContext = from m in _context.Book.Include(a => a.Category)
                                                     .Include(b => b.Author)
                                                     .Include(c => c.Publisher)
-                             select m;
+                               select m;
 
         if (!String.IsNullOrEmpty(searchString))
         {
@@ -173,7 +180,7 @@ public class HomeController : Controller
         myOrder.Address = address;
         myOrder.UserID = cusid;
         myOrder.Phone = phone;
-        myOrder.State = "In Process";
+        myOrder.State = "In Process (COD)";
         _context.Order.Add(myOrder);
         _context.SaveChanges();//this generates the Id for Order
 
@@ -192,6 +199,61 @@ public class HomeController : Controller
         HttpContext.Session.SetObject("cart", cart);
         return View();
     }
+    [Authorize]
+    [HttpPost]
+    public IActionResult PlaceOrder(decimal total, string fullname, string address, string phone, string cusid, Order model, string payment = "COD")
+    {
+        if (ModelState.IsValid)
+        {
+
+			if (payment == "Payment by VNPay")
+			{
+                var vnPayModel = new VnPaymentRequestModel
+                {
+                    Total = (decimal)model.Total,
+                    CreatedDate = DateTime.Now,
+                    Description = $"{model.Fullname} {model.Phone}",
+                    Fullname = model.Fullname,
+                    OrderId = new Random().Next(1000, 100000)
+                };
+				return Redirect(_vnPayservice.CreatePaymentUrl(HttpContext, vnPayModel));
+			}
+			ShoppingCart cart = (ShoppingCart)HttpContext.Session.GetObject<ShoppingCart>("cart");
+			Order myOrder = new Order();
+			myOrder.OrderTime = DateTime.Now;
+			myOrder.Total = total;
+			myOrder.Fullname = fullname;
+			myOrder.Address = address;
+			myOrder.UserID = cusid;
+			myOrder.Phone = phone;
+			myOrder.State = "In Process (Paid)";
+			_context.Order.Add(myOrder);
+			_context.SaveChanges();//this generates the Id for Order
+
+			foreach (var item in cart.Items)
+			{
+				OrderItem myOrderItem = new OrderItem();
+				myOrderItem.BookID = item.ID;
+				myOrderItem.Quantity = item.Quantity;
+				myOrderItem.OrderID = myOrder.Id;//id of saved order above
+
+				_context.OrderItem.Add(myOrderItem);
+			}
+			_context.SaveChanges();
+			//empty shopping cart
+			cart = new ShoppingCart();
+            HttpContext.Session.SetObject("cart", cart);
+            return View("Success");
+        }
+        return View();
+    }
+
+    [Authorize]
+    public IActionResult PaymentSuccess()
+    {
+        return View("Success");
+    }
+
     [HttpPost]
     public RedirectToActionResult EditOrder(int id, int quantity)
     {
@@ -228,4 +290,29 @@ public class HomeController : Controller
         var lUMOSBookContext = _context.OrderItem.Where(e => e.Order.Id == id).Include(b => b.Book).Include(o => o.Order).Include(c => c.Book.Author);
         return View(await lUMOSBookContext.ToListAsync());
     }
+	[Authorize]
+	public IActionResult PaymentFail()
+	{
+		return View();
+	}
+
+	[Authorize]
+	public IActionResult PaymentCallBack()
+	{
+		var response = _vnPayservice.PaymentExecute(Request.Query);
+
+		if (response == null || response.VnPayResponseCode != "00")
+		{
+			TempData["Message"] = $"Error Payment VN Pay: {response.VnPayResponseCode}";
+			return RedirectToAction("PaymentFail");
+		}
+
+
+		// Lưu đơn hàng vô database
+
+		TempData["Message"] = $"Payment by VnPay Success!";
+		return RedirectToAction("PaymentSuccess");
+	}
+
+
 }

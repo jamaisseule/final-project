@@ -7,6 +7,7 @@
     decimal total = 0;
     string cusid = ViewData["uid"].ToString();
 }
+
 <section class="bg0 p-t-100 p-b-80">
     <div class="container">
         <div class="row p-b-20">
@@ -44,31 +45,31 @@
                                                     <td class="column-5" align="center">
                                                         <div class="wrap-num-product flex-w">
                                                             <div
-                                                            class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+                                                                class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
                                                                 <i class="fs-16 zmdi zmdi-minus"></i>
                                                             </div>
                                                             <input class="mtext-104 cl3 txt-center num-product"
-                                                            type="number" min="0" name="quantity"
-                                                            value="@item.Quantity" />
+                                                                type="number" min="0" name="quantity"
+                                                                value="@item.Quantity" />
                                                             <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
                                                                 <i class="fs-16 zmdi zmdi-plus"></i>
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td class="column-6">$@(item.Price*item.Quantity)</td>
+                                                    <td class="column-6">$@(item.Price * item.Quantity)</td>
                                                     <td>
                                                         <input type="hidden" name="id" value="@item.ID" />
                                                         <input
-                                                        class="flex-c-m stext-101 cl2 size-105 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10"
-                                                        type="submit" value="Update" class="btn btn-primary" />
+                                                            class="flex-c-m stext-101 cl2 size-105 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10"
+                                                            type="submit" value="Update" class="btn btn-primary" />
                                                     </td>
                                                 </form>
                                                 <td>
                                                     <form asp-action="RemoveOrderItem" method="post">
                                                         <input type="hidden" name="id" value="@item.ID" />
                                                         <input
-                                                        class="flex-c-m stext-101 cl2 size-105 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10"
-                                                        type="submit" value="Remove" class="btn btn-danger" />
+                                                            class="flex-c-m stext-101 cl2 size-105 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10"
+                                                            type="submit" value="Remove" class="btn btn-danger" />
                                                     </form>
                                                 </td>
                                             </tr>
@@ -98,68 +99,37 @@
                                         @foreach (var user in Model)
                                         {
                                             <h3 class="mb-4">Payment</h3>
-                                            <form asp-action="PlaceOrder" method="post">
+                                            <form asp-action="PaymentWithPaypal" method="post">
                                                 <div class="form-outline mb-4" hidden>
                                                     <label class="form-label" for="cusid"><strong>CusID</strong></label>
                                                     <input type="text" name="cusid" class="form-control form-control-lg"
-                                                    value="@cusid" />
+                                                        value="@cusid" />
                                                 </div>
                                                 <div class="form-outline mb-4">
-                                                    <label class="form-label" for="fullname"><strong>Fullname</strong></label>
+                                                    <label class="form-label"
+                                                        for="fullname"><strong>Fullname</strong></label>
                                                     <input type="text" name="fullname" class="form-control form-control-lg"
-                                                    value="@user.Name" />
+                                                        value="@user.Name" />
                                                 </div>
                                                 <div class="form-outline mb-4">
                                                     <label class="form-label" for="address"><strong>Address</strong></label>
-                                                    <input type="text" name="address"
-                                                    class="form-control form-control-lg" value="@user.Address"/>
+                                                    <input type="text" name="address" class="form-control form-control-lg"
+                                                        value="@user.Address" />
                                                 </div>
 
                                                 <div class="form-outline mb-4">
                                                     <label class="form-label" for="phone"><strong>Phone</strong></label>
-                                                    <input type="text" name="phone" class="form-control form-control-lg" value="@user.PhoneNumber"/>
+                                                    <input type="text" name="phone" class="form-control form-control-lg"
+                                                        value="@user.PhoneNumber" />
                                                 </div>
 
-<div class="form-check mb-4">
-    <input class="form-check-input" type="radio" name="paymentMethod" id="cashOnDelivery" value="CashOnDelivery" checked>
-    <label class="form-check-label" for="cashOnDelivery">
-        Cash on Delivery
-    </label>
-</div>
-<div class="form-check mb-4">
-    <input class="form-check-input" type="radio" name="paymentMethod" id="payByCard" value="PayByCard">
-    <label class="form-check-label" for="payByCard">
-        Credit Card
-    </label>
-</div>
-
-<!-- Credit card information fields -->
-<div id="creditCardFields" style="display: none;">
-    <div class="form-outline mb-4">
-        <label class="form-label" for="cardNumber"><strong>Card Number</strong></label>
-        <input type="text" name="cardNumber" class="form-control form-control-lg" />
-    </div>
-    <div class="form-outline mb-4">
-        <label class="form-label" for="expirationDate"><strong>Expiration Date</strong></label>
-        <input type="text" name="expirationDate" class="form-control form-control-lg" />
-    </div>
-    <div class="form-outline mb-4">
-        <label class="form-label" for="cvv"><strong>CVV</strong></label>
-        <input type="text" name="cvv" class="form-control form-control-lg" />
-    </div>
-    <div class="form-outline mb-4">
-        <label class="form-label" for="cardholderName"><strong>Cardholder Name</strong></label>
-        <input type="text" name="cardholderName" class="form-control form-control-lg" />
-    </div>
-</div>                  
                                                 <div class="row">
                                                     <input type="hidden" name="total" value="@total" />
                                                     <input
-                                                    class="flex-c-m stext-101 cl0 m-r-20 size-101 bg3 bor14 hov-btn3 p-lr-5 trans-04 pointer"
-                                                    type="submit" value="Order" class="btn btn-primary" />
-
+                                                        class="flex-c-m stext-101 cl0 m-r-20 size-101 bg3 bor14 hov-btn3 p-lr-5 trans-04 pointer"
+                                                        type="submit" value="Order" class="btn btn-primary" /> 
                                                     <a asp-action="Index"
-                                                    class="flex-c-m stext-101 cl0 size-101 bg3 bor14 hov-btn3 p-lr-5 trans-04 pointer">
+                                                        class="flex-c-m stext-101 cl0 size-101 bg3 bor14 hov-btn3 p-lr-5 trans-04 pointer">
                                                         Cancel
                                                     </a>
                                                 </div>
@@ -177,8 +147,8 @@
     </div>
 </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
+@* <script>
+    document.addEventListener('DOMContentLoaded', function () {
         var payByCardRadio = document.getElementById('payByCard');
         var cashOnDeliveryRadio = document.getElementById('cashOnDelivery');
         var creditCardFields = document.getElementById('creditCardFields');
@@ -186,11 +156,11 @@
         // Initial check
         toggleCreditCardFields(payByCardRadio.checked);
 
-        payByCardRadio.addEventListener('change', function() {
+        payByCardRadio.addEventListener('change', function () {
             toggleCreditCardFields(this.checked);
         });
 
-        cashOnDeliveryRadio.addEventListener('change', function() {
+        cashOnDeliveryRadio.addEventListener('change', function () {
             toggleCreditCardFields(!this.checked);
         });
 
@@ -202,4 +172,4 @@
             }
         }
     });
-</script>
+</script> *@

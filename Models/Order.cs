@@ -3,7 +3,7 @@ using LUMOSBook.Areas.Identity.Data;
 namespace LUMOSBook.Models;
 public class Order
 {
-        public int Id { get; set; }       
+        public long Id { get; set; }       
         [DataType(DataType.Date)]
         public DateTime OrderTime { get; set; }
         public decimal? Total { get; set; }

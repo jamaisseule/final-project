@@ -1,0 +1,114 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Web;
+
+namespace LUMOSBook.Config
+{
+    public class PaymentConfig
+    {
+        public static string vnp_PayUrl = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
+        public static string vnp_ReturnUrl = "/payment";
+        public static string vnp_TmnCode = " XWZXRYOK";
+        public static string secretKey = "OWSVKGLHTKNKWZPTBJANKFFEKLRYYRHF";
+        public static string vnp_ApiUrl = "https://sandbox.vnpayment.vn/merchant_webapi/api/transaction";
+
+        public static string Md5(string message)
+        {
+            using (var md5 = MD5.Create())
+            {
+                byte[] inputBytes = Encoding.UTF8.GetBytes(message);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in hashBytes)
+                {
+                    sb.Append(b.ToString("x2"));
+                }
+                return sb.ToString();
+            }
+        }
+
+        public static string Sha256(string message)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] inputBytes = Encoding.UTF8.GetBytes(message);
+                byte[] hashBytes = sha256.ComputeHash(inputBytes);
+
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in hashBytes)
+                {
+                    sb.Append(b.ToString("x2"));
+                }
+                return sb.ToString();
+            }
+        }
+
+        public static string HashAllFields(Dictionary<string, string> fields)
+        {
+            List<string> fieldNames = fields.Keys.ToList();
+            fieldNames.Sort();
+            StringBuilder sb = new StringBuilder();
+            foreach (string fieldName in fieldNames)
+            {
+                string fieldValue = fields[fieldName];
+                if (!string.IsNullOrEmpty(fieldValue))
+                {
+                    sb.Append(fieldName);
+                    sb.Append("=");
+                    sb.Append(fieldValue);
+                }
+                if (fieldNames.IndexOf(fieldName) < fieldNames.Count - 1)
+                {
+                    sb.Append("&");
+                }
+            }
+            return HmacSHA512(secretKey, sb.ToString());
+        }
+
+        public static string HmacSHA512(string key, string data)
+        {
+            using (var hmac = new HMACSHA512(Encoding.UTF8.GetBytes(key)))
+            {
+                byte[] dataBytes = Encoding.UTF8.GetBytes(data);
+                byte[] result = hmac.ComputeHash(dataBytes);
+
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in result)
+                {
+                    sb.Append(b.ToString("x2"));
+                }
+                return sb.ToString();
+            }
+        }
+
+        public static string GetIpAddress(HttpRequest request)
+        {
+            string ipAddress;
+            try
+            {
+                ipAddress = request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+                if (string.IsNullOrEmpty(ipAddress))
+                {
+                    ipAddress = request.ServerVariables["REMOTE_ADDR"];
+                }
+            }
+            catch (Exception e)
+            {
+                ipAddress = "Invalid IP: " + e.Message;
+            }
+            return ipAddress;
+        }
+
+        public static string GetRandomNumber(int len)
+        {
+            Random rnd = new Random();
+            const string chars = "0123456789";
+            return new string(Enumerable.Repeat(chars, len)
+              .Select(s => s[rnd.Next(s.Length)]).ToArray());
+        }
+    }
+}

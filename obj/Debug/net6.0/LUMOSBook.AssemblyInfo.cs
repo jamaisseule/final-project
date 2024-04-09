@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LUMOSBook")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d7f821860a2a8f3bdac2c49e2704f9cf65e749b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65f5afb5363eac8703065ce58a3dd18be7441105")]
 [assembly: System.Reflection.AssemblyProductAttribute("LUMOSBook")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LUMOSBook")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

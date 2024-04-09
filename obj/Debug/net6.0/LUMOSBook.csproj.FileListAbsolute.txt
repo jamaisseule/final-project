@@ -962,3 +962,4 @@ C:\Users\Asus\Final\obj\Debug\net6.0\refint\LUMOSBook.dll
 C:\Users\Asus\Final\obj\Debug\net6.0\LUMOSBook.pdb
 C:\Users\Asus\Final\obj\Debug\net6.0\LUMOSBook.genruntimeconfig.cache
 C:\Users\Asus\Final\obj\Debug\net6.0\ref\LUMOSBook.dll
+C:\Users\Asus\Final\bin\Debug\net6.0\Web.config

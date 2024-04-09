@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "VnPayment";
+}
+
+<h2>VnPayment</h2>
+<div class="container">
+    <div class="row">
+       @*  <div class="col-md-4 order-md-2 mb-4"
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Đơn hàng</span>
+                <span class="badge badge-secondary badge-pill">1</span>
+            </h4>
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Tên sản phẩm</h6>
+                        <small class="text-muted">Thanh toán hóa đơn</small>
+                    </div>
+                    <span class="text-muted">100.000₫</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>Tổng tiền thanh toán</span>
+                    <strong>100.000₫</strong>
+                </li>
+            </ul>
+        </div>
+ *@
+        <form id="form2" asp-action="PlaceOrder"  method="post">
+            <div class="col-md-8 order-md-1">
+
+                <h4>Chọn phương thức thanh toán:</h4>
+
+                <div class="d-block my-3">
+                    <h5 class="mb-3">Cách 1: Chuyển hướng sang VNPAY chọn phương thức thanh toán</h5>
+                    <div class="custom-control custom-radio">
+                        <input id="bankcode_Default" type="radio" name="RadioGroup1" value="VNPAYQR" checked="checked" class="custom-control-input" />
+                        <label for="bankcode_Default" class="custom-control-label">Cổng thanh toán VNPAYQR</label><br />
+                    </div>
+
+                    <h5 class="mb-3">Cách 2: Tách phương thức thanh toán tại site của Merchant</h5>
+                    <div class="custom-control custom-radio">
+                        <input id="bankcode_Vnpayqr" type="radio" name="RadioGroup1" value="VNPAYQR" class="custom-control-input" />
+                        <label for="bankcode_Vnpayqr" class="custom-control-label">Thanh toán qua ứng dụng hỗ trợ VNPAYQR</label><br />
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="bankcode_Vnbank" type="radio" name="RadioGroup1" value="VNBANK" class="custom-control-input" />
+                        <label for="bankcode_Vnbank" class="custom-control-label">ATM-Tài khoản ngân hàng nội địa</label><br />
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="bankcode_Intcard" type="radio" name="RadioGroup1" value="INTCARD" class="custom-control-input" />
+                        <label for="bankcode_Intcard" class="custom-control-label">Thanh toán qua thẻ quốc tế</label><br />
+                    </div>
+
+                    <h4>Chọn ngôn ngữ thanh toán:</h4>
+                    <div class="custom-control custom-radio">
+                        <input id="locale_Vn" type="radio" name="RadioGroup2" value="vi" checked="checked" class="custom-control-input" />
+                        <label for="locale_Vn" class="custom-control-label">Tiếng việt</label><br />
+                        <input id="locale_En" type="radio" name="RadioGroup2" value="en" class="custom-control-input" />
+                        <label for="locale_En" class="custom-control-label">Tiếng anh</label><br />
+                    </div>
+
+                    <button id="btnPay" type="submit" class="btn btn-default">Payment</button>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+

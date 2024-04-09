@@ -43,6 +43,22 @@
           }
         }
       },
+      "log4net/2.0.17": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/log4net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/log4net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MessagePack/2.1.152": {
         "type": "package",
         "dependencies": {
@@ -4115,6 +4131,32 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "log4net/2.0.17": {
+      "sha512": "qnnDf/ubJzwm2i1xH7nRMjEDoD+ctse7nZDqb+p7L1PvZc6ykpMoEesWr1/9hFqlsbII2v9e8yyQHJhoDQh7ZA==",
+      "type": "package",
+      "path": "log4net/2.0.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/log4net.dll",
+        "lib/net20/log4net.xml",
+        "lib/net35/log4net.dll",
+        "lib/net35/log4net.xml",
+        "lib/net40-client/log4net.dll",
+        "lib/net40-client/log4net.xml",
+        "lib/net40/log4net.dll",
+        "lib/net40/log4net.xml",
+        "lib/net45/log4net.dll",
+        "lib/net45/log4net.xml",
+        "lib/netstandard1.3/log4net.dll",
+        "lib/netstandard1.3/log4net.xml",
+        "lib/netstandard2.0/log4net.dll",
+        "lib/netstandard2.0/log4net.xml",
+        "log4net.2.0.17.nupkg.sha512",
+        "log4net.nuspec",
+        "package-icon.png"
       ]
     },
     "MessagePack/2.1.152": {
@@ -11465,7 +11507,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
       "Microsoft.Extensions.Caching.Memory >= 6.0.1",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
+      "log4net >= 2.0.17"
     ]
   },
   "packageFolders": {
@@ -11481,12 +11524,15 @@
       "outputPath": "C:\\Users\\Asus\\Final\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11499,6 +11545,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -11544,6 +11595,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[6.0.10, )"
+          },
+          "log4net": {
+            "target": "Package",
+            "version": "[2.0.17, )"
           }
         },
         "imports": [
@@ -11560,19 +11615,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
+            "version": "[6.0.27, 6.0.27]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.26, 6.0.26]"
+            "version": "[6.0.27, 6.0.27]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
+            "version": "[6.0.27, 6.0.27]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
+            "version": "[6.0.27, 6.0.27]"
           }
         ],
         "frameworkReferences": {
@@ -11583,7 +11638,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
