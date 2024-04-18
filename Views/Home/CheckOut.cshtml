@@ -34,43 +34,41 @@
                                             total += item.Price * item.Quantity;
                                             <tr class="table_row">
                                                 <form asp-action="EditOrder" method="post">
-                                                    <td class="column-1">
-                                                        <div class="how-itemcart1">
-                                                            <img src="~/uploads/@item.Poster" alt="IMG">
+                                                <td class="column-1">
+                                                    <div class="how-itemcart1">
+                                                        <img src="~/uploads/@item.Poster" alt="IMG">
+                                                    </div>
+                                                </td>
+                                                <td class="column-2">@item.Title</td>
+                                                <td class="column-3">@item.Author</td>
+                                                <td class="column-4">$@item.Price</td>
+                                                <td class="column-5" align="center">
+                                                    <div class="wrap-num-product flex-w">
+                                                        <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+                                                            <i class="fs-16 zmdi zmdi-minus"></i>
                                                         </div>
-                                                    </td>
-                                                    <td class="column-2">@item.Title</td>
-                                                    <td class="column-3">@item.Author</td>
-                                                    <td class="column-4">$@item.Price</td>
-                                                    <td class="column-5" align="center">
-                                                        <div class="wrap-num-product flex-w">
-                                                            <div
-                                                                class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-                                                                <i class="fs-16 zmdi zmdi-minus"></i>
-                                                            </div>
-                                                            <input class="mtext-104 cl3 txt-center num-product"
-                                                                type="number" min="0" name="quantity"
-                                                                value="@item.Quantity" />
-                                                            <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-                                                                <i class="fs-16 zmdi zmdi-plus"></i>
-                                                            </div>
+                                                        <input class="mtext-104 cl3 txt-center num-product"
+                                                               type="number" min="0" name="quantity"
+                                                               value="@item.Quantity" />
+                                                        <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+                                                            <i class="fs-16 zmdi zmdi-plus"></i>
                                                         </div>
-                                                    </td>
-                                                    <td class="column-6">$@(item.Price * item.Quantity)</td>
-                                                    <td>
-                                                        <input type="hidden" name="id" value="@item.ID" />
-                                                        <input
-                                                            class="flex-c-m stext-101 cl2 size-105 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10"
-                                                            type="submit" value="Update" class="btn btn-primary" />
-                                                    </td>
+                                                    </div>
+                                                </td>
+                                                <td class="column-6">$@(item.Price * item.Quantity)</td>
+                                                <td>
+                                                    <input type="hidden" name="id" value="@item.ID" />
+                                                    <input class="flex-c-m stext-101 cl2 size-105 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10"
+                                                           type="submit" value="Update" class="btn btn-primary" />
+                                                </td>
                                                 </form>
                                                 <td>
                                                     <form asp-action="RemoveOrderItem" method="post">
                                                         <input type="hidden" name="id" value="@item.ID" />
-                                                        <input
-                                                            class="flex-c-m stext-101 cl2 size-105 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10"
-                                                            type="submit" value="Remove" class="btn btn-danger" />
+                                                        <input class="flex-c-m stext-101 cl2 size-105 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10"
+                                                               type="submit" value="Remove" class="btn btn-danger" />
                                                     </form>
+
                                                 </td>
                                             </tr>
                                         }
@@ -99,44 +97,48 @@
                                         @foreach (var user in Model)
                                         {
                                             <h3 class="mb-4">Payment</h3>
-                                            <form asp-action="PaymentWithPaypal" method="post">
+                                            <form asp-action="PlaceOrder" method="post">
                                                 <div class="form-outline mb-4" hidden>
                                                     <label class="form-label" for="cusid"><strong>CusID</strong></label>
                                                     <input type="text" name="cusid" class="form-control form-control-lg"
-                                                        value="@cusid" />
+                                                           value="@cusid" />
                                                 </div>
                                                 <div class="form-outline mb-4">
                                                     <label class="form-label"
-                                                        for="fullname"><strong>Fullname</strong></label>
+                                                           for="fullname"><strong>Fullname</strong></label>
                                                     <input type="text" name="fullname" class="form-control form-control-lg"
-                                                        value="@user.Name" />
+                                                           value="@user.Name" />
                                                 </div>
                                                 <div class="form-outline mb-4">
                                                     <label class="form-label" for="address"><strong>Address</strong></label>
                                                     <input type="text" name="address" class="form-control form-control-lg"
-                                                        value="@user.Address" />
+                                                           value="@user.Address" />
                                                 </div>
 
                                                 <div class="form-outline mb-4">
                                                     <label class="form-label" for="phone"><strong>Phone</strong></label>
                                                     <input type="text" name="phone" class="form-control form-control-lg"
-                                                        value="@user.PhoneNumber" />
+                                                           value="@user.PhoneNumber" />
                                                 </div>
 
                                                 <div class="row">
                                                     <input type="hidden" name="total" value="@total" />
-                                                    <input
-                                                        class="flex-c-m stext-101 cl0 m-r-20 size-101 bg3 bor14 hov-btn3 p-lr-5 trans-04 pointer"
-                                                        type="submit" value="Order" class="btn btn-primary" /> 
+
+                                                    <input class="flex-c-m stext-101 cl0 m-r-20 size-101 bg3 bor14 hov-btn3 p-lr-5 trans-04 pointer"
+                                                           type="submit" name="PlaceOrder" value="Order" class="btn btn-primary" />
                                                     <a asp-action="Index"
-                                                        class="flex-c-m stext-101 cl0 size-101 bg3 bor14 hov-btn3 p-lr-5 trans-04 pointer">
+                                                       class="flex-c-m stext-101 cl0 size-101 bg3 bor14 hov-btn3 p-lr-5 trans-04 pointer">
                                                         Cancel
                                                     </a>
+                                                    @*   <a asp-action="PlaceOrder" asp-controller="Home" value="CheckOut" type="submit" type="submit">
+                                                Check Out
+                                                </a> *@
                                                 </div>
+
+
                                             </form>
                                         }
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -147,29 +149,32 @@
     </div>
 </section>
 
-@* <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var payByCardRadio = document.getElementById('payByCard');
-        var cashOnDeliveryRadio = document.getElementById('cashOnDelivery');
-        var creditCardFields = document.getElementById('creditCardFields');
+@section Scripts {
+    <script src="https://www.paypal.com/sdk/js?client-id=@ViewBag.PaypalClientId"></script>
 
-        // Initial check
-        toggleCreditCardFields(payByCardRadio.checked);
-
-        payByCardRadio.addEventListener('change', function () {
-            toggleCreditCardFields(this.checked);
-        });
-
-        cashOnDeliveryRadio.addEventListener('change', function () {
-            toggleCreditCardFields(!this.checked);
-        });
-
-        function toggleCreditCardFields(isVisible) {
-            if (isVisible) {
-                creditCardFields.style.display = 'block';
-            } else {
-                creditCardFields.style.display = 'none';
+    <script>
+        paypal.Buttons({
+            createOrder: function (data, actions) {
+                // This function sets up the details of the transaction, including the amount and line item details.
+                return fetch('/checkout/create-paypal-order', {
+                    method: 'POST'
+                }).then(function (response) {
+                    return response.json();
+                }).then(function (order) {
+                    return order.id; // Return order ID
+                });
+            },
+            onApprove: function (data, actions) {
+                // This function captures the funds from the transaction.
+                return fetch('/checkout/capture-paypal-order?orderId=' + data.orderID, {
+                    method: 'POST'
+                }).then(function (response) {
+                    return response.json();
+                }).then(function (result) {
+                    // Handle successful capture, e.g., show success message
+                    alert('Payment successful!');
+                });
             }
-        }
-    });
-</script> *@
+        }).render('#paypal-button-container');
+    </script>
+}

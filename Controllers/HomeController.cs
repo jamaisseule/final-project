@@ -22,6 +22,7 @@ using OfficeOpenXml.FormulaParsing.Excel.Functions.DateTime;
 using OfficeOpenXml.FormulaParsing.Excel.Functions.RefAndLookup;
 using OfficeOpenXml.Style;
 using System.Net;
+using Stripe.Checkout;
 
 namespace LUMOSBook.Controllers;
 
@@ -168,85 +169,116 @@ public class HomeController : Controller
             return View("EmptyCart");
         }
     }
+    [Authorize]
+    public IActionResult OrderConfirmation()
+    {
+        var service = new SessionService();
+        Session session = service.Get(TempData["Session"].ToString());
+
+        if(session.PaymentStatus == "paid")
+        {
+            var transaction = session.PaymentIntentId.ToString();
+            return View("Success");
+        }
+        return View("Fail");
+
+    }
+    [Authorize]
+    public IActionResult Success()
+    {
+        return View();
+    }
+    [Authorize]
+    public IActionResult Fail()
+    {
+        return View();
+    }
 
     [Authorize(Roles = "Customer, StoreOwner, Admin")]
     public IActionResult PlaceOrder(decimal total, string fullname, string address, string phone, string cusid)
     {
-        ShoppingCart cart = (ShoppingCart)HttpContext.Session.GetObject<ShoppingCart>("cart");
-        Order myOrder = new Order();
-        myOrder.OrderTime = DateTime.Now;
-        myOrder.Total = total;
-        myOrder.Fullname = fullname;
-        myOrder.Address = address;
-        myOrder.UserID = cusid;
-        myOrder.Phone = phone;
-        myOrder.State = "In Process (COD)";
-        _context.Order.Add(myOrder);
-        _context.SaveChanges();//this generates the Id for Order
+        ShoppingCart cart = HttpContext.Session.GetObject<ShoppingCart>("cart");
 
+        // Ensure items exist in the cart
+        if (cart == null || cart.Items.Count == 0)
+        {
+            // Handle empty cart scenario
+            return RedirectToAction("Index", "Cart");
+        }
+
+        // Create an order
+        Order myOrder = new Order
+        {
+            OrderTime = DateTime.Now,
+            Total = total,
+            Fullname = fullname,
+            Address = address,
+            UserID = cusid,
+            Phone = phone,
+            State = "In Process"
+        };
+
+        _context.Order.Add(myOrder);
+        _context.SaveChanges(); // Generates the Id for Order
+
+        // Create order items
         foreach (var item in cart.Items)
         {
-            OrderItem myOrderItem = new OrderItem();
-            myOrderItem.BookID = item.ID;
-            myOrderItem.Quantity = item.Quantity;
-            myOrderItem.OrderID = myOrder.Id;//id of saved order above
+            OrderItem myOrderItem = new OrderItem
+            {
+                BookID = item.ID,
+                Quantity = item.Quantity,
+                // OrderID = myOrder.Id // Id of saved order above
+            };
 
             _context.OrderItem.Add(myOrderItem);
         }
+
         _context.SaveChanges();
-        //empty shopping cart
-        cart = new ShoppingCart();
-        HttpContext.Session.SetObject("cart", cart);
-        return View();
-    }
-    [Authorize]
-    [HttpPost]
-    public IActionResult PlaceOrder(decimal total, string fullname, string address, string phone, string cusid, Order model, string payment = "COD")
-    {
-        if (ModelState.IsValid)
+
+        // Clear shopping cart
+        HttpContext.Session.Remove("cart");
+
+        // Create Stripe Checkout session
+        var domain = "https://localhost:7219/";
+
+        var options = new SessionCreateOptions
         {
+            SuccessUrl = domain + "home/checkout/OrderConfirmation",
+            CancelUrl = domain + "home/checkout/Fail",
+            PaymentMethodTypes = new List<string> { "card" },
+            Mode = "payment",
+            LineItems = new List<SessionLineItemOptions>()
+        };
 
-			if (payment == "Payment by VNPay")
-			{
-                var vnPayModel = new VnPaymentRequestModel
+        foreach (var item in cart.Items)
+        {
+            var sessionListItem = new SessionLineItemOptions
+            {
+                PriceData = new SessionLineItemPriceDataOptions
                 {
-                    Total = (decimal)model.Total,
-                    CreatedDate = DateTime.Now,
-                    Description = $"{model.Fullname} {model.Phone}",
-                    Fullname = model.Fullname,
-                    OrderId = new Random().Next(1000, 100000)
-                };
-				return Redirect(_vnPayservice.CreatePaymentUrl(HttpContext, vnPayModel));
-			}
-			ShoppingCart cart = (ShoppingCart)HttpContext.Session.GetObject<ShoppingCart>("cart");
-			Order myOrder = new Order();
-			myOrder.OrderTime = DateTime.Now;
-			myOrder.Total = total;
-			myOrder.Fullname = fullname;
-			myOrder.Address = address;
-			myOrder.UserID = cusid;
-			myOrder.Phone = phone;
-			myOrder.State = "In Process (Paid)";
-			_context.Order.Add(myOrder);
-			_context.SaveChanges();//this generates the Id for Order
+                    UnitAmount = (long)(item.Price * 100), // Price per unit in cents
+                    Currency = "usd",
+                    ProductData = new SessionLineItemPriceDataProductDataOptions
+                    {
+                        Name = item.Title
+                    }
+                },
+                Quantity = item.Quantity
+            };
 
-			foreach (var item in cart.Items)
-			{
-				OrderItem myOrderItem = new OrderItem();
-				myOrderItem.BookID = item.ID;
-				myOrderItem.Quantity = item.Quantity;
-				myOrderItem.OrderID = myOrder.Id;//id of saved order above
-
-				_context.OrderItem.Add(myOrderItem);
-			}
-			_context.SaveChanges();
-			//empty shopping cart
-			cart = new ShoppingCart();
-            HttpContext.Session.SetObject("cart", cart);
-            return View("Success");
+            options.LineItems.Add(sessionListItem);
         }
-        return View();
+
+        var service = new SessionService();
+        Session session = service.Create(options);
+
+        TempData["Session"] = session.Id;
+
+        return Redirect(session.Url);
     }
+
+    
 
     [Authorize]
     public IActionResult PaymentSuccess()
@@ -290,29 +322,29 @@ public class HomeController : Controller
         var lUMOSBookContext = _context.OrderItem.Where(e => e.Order.Id == id).Include(b => b.Book).Include(o => o.Order).Include(c => c.Book.Author);
         return View(await lUMOSBookContext.ToListAsync());
     }
-	[Authorize]
-	public IActionResult PaymentFail()
-	{
-		return View();
-	}
+    [Authorize]
+    public IActionResult PaymentFail()
+    {
+        return View();
+    }
 
-	[Authorize]
-	public IActionResult PaymentCallBack()
-	{
-		var response = _vnPayservice.PaymentExecute(Request.Query);
+    [Authorize]
+    public IActionResult PaymentCallBack()
+    {
+        var response = _vnPayservice.PaymentExecute(Request.Query);
 
-		if (response == null || response.VnPayResponseCode != "00")
-		{
-			TempData["Message"] = $"Error Payment VN Pay: {response.VnPayResponseCode}";
-			return RedirectToAction("PaymentFail");
-		}
+        if (response == null || response.VnPayResponseCode != "00")
+        {
+            TempData["Message"] = $"Error Payment VN Pay: {response.VnPayResponseCode}";
+            return RedirectToAction("PaymentFail");
+        }
 
 
-		// Lưu đơn hàng vô database
+        // Lưu đơn hàng vô database
 
-		TempData["Message"] = $"Payment by VnPay Success!";
-		return RedirectToAction("PaymentSuccess");
-	}
+        TempData["Message"] = $"Payment by VnPay Success!";
+        return RedirectToAction("PaymentSuccess");
+    }
 
 
 }
